@@ -1,0 +1,84 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(http-equiv='X-UA-Compatible' content='IE=edge')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  link(rel='shortcut icon' href='./../img/logo.png' type='image/x-icon')
+  // Google fonts
+  link(rel='preconnect' href='https://fonts.googleapis.com')
+  link(rel='preconnect' href='https://fonts.gstatic.com' crossorigin='')
+  link(href='https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap' rel='stylesheet')
+  title Transport Diary
+  link(rel='stylesheet' href='/css/register_login.css')
+  script(src='https://kit.fontawesome.com/16f1886a82.js' crossorigin='anonymous' defer='')
+.background
+  img.food__item.f-1(src='../img/transport/f-1.jpg' alt='Food 1')
+  img.food__item.f-2(src='../img/transport/f-2.jpg' alt='Food 2')
+  img.food__item.f-3(src='../img/transport/f-3.jpg' alt='Food 3')
+  img.food__item.f-4(src='../img/transport/f-4.jpeg' alt='Food 4')
+  img.food__item.f-5(src='../img/transport/f-5.jpeg' alt='Food 5')
+  img.food__item.f-6(src='../img/transport/f-6.jpeg' alt='Food 6')
+  img.food__item.f-7(src='../img/transport/f-7.jpeg' alt='Food 7')
+  img.food__item.f-8(src='../img/transport/f-8.jpeg' alt='Food 8')
+  img.food__item.f-9(src='../img/transport/f-9.jpg' alt='Food 9')
+  img.food__item.f-10(src='../img/transport/f-10.jpg' alt='Food 10')
+  img.food__item.f-11(src='../img/transport/f-11.jpg' alt='Food 11')
+  img.food__item.f-12(src='../img/transport/f-12.jpeg' alt='Food 12')
+  img.food__item.f-13(src='../img/transport/f-13.jpeg' alt='Food 13')
+  img.food__item.f-14(src='../img/transport/f-14.jpg' alt='Food 14')
+  img.food__item.f-15(src='../img/transport/f-15.jpeg' alt='Food 15')
+  img.food__item.f-16(src='../img/transport/f-16.jpeg' alt='Food 16')
+  img.food__item.f-17(src='../img/transport/f-17.jpg' alt='Food 17')
+  img.food__item.f-18(src='../img/transport/f-18.jpeg' alt='Food 18')
+  img.food__item.f-19(src='../img/transport/f-19.jpeg' alt='Food 19')
+  img.food__item.f-20(src='../img/transport/f-20.jpg' alt='Food 20')
+  img.food__item.f-21(src='../img/transport/f-21.jpeg' alt='Food 21')
+  img.food__item.f-22(src='../img/transport/f-22.jpeg' alt='Food 22')
+  img.food__item.f-23(src='../img/transport/f-23.jpg' alt='Food 23')
+  img.food__item.f-24(src='../img/transport/f-24.jpeg' alt='Food 24')
+  img.food__item.f-25(src='../img/transport/f-25.jpg' alt='Food 25')
+  img.food__item.f-26(src='../img/transport/f-26.jpg' alt='Food 26')
+.login_signup
+  .login
+    h1 Login
+    form.form--login
+      .txt_field
+        input#email_login(type='email' name='email' required='true')
+        label(for='email_login') Email
+      .txt_field
+        input#password_login(type='password' name='password' required='true')
+        label(for='password_login') Password
+      .pass Forgot Password?
+      button.login_btn(type='submit') Login
+      .social__icons
+        a(href='#')
+          i.fa-brands.fa-google
+        a(href='#')
+          i.fa-solid.fa-phone
+      .signup_link
+        | Not a member? 
+        button.signUp(type='button') Signup
+.login_signup.signup.hidden
+  h1 Signup
+  form.form--signup
+    .txt_field
+      input#name(type='text' name='name' required='true')
+      label(for='name') Name
+    .txt_field
+      input#email_signup(type='email' name='email' required='true')
+      label(for='email_signup') Email
+    .txt_field
+      input#mobile(type='mobile' name='mobile' required='true')
+      label(for='mobile') Mobile
+    .txt_field
+      input#password_signup(type='password' name='password' required='true')
+      label(for='password_signup') Password
+    .txt_field
+      input#passwordConfirm(type='password' name='passwordConfirm' required='true')
+      label(for='passwordConfirm') Confirm Password
+    button.submit_btn(type='submit') Submit
+    .login_link
+        | Already a member? 
+        button.logIn(type='button') Login
+script(src='./../js/styles/register_login.js')
+script(src='./../js/bundle.js')

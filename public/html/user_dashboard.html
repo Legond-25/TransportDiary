@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="./../img/logo.png" type="image/x-icon">
+
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+    <!-- Custom css -->
+    <link rel="stylesheet" href="./../css/user_dashboard.css" />
+
+    <!-- Font awesome link -->
+    <script src="https://kit.fontawesome.com/16f1886a82.js" crossorigin="anonymous" defer></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <title>User Dashboard</title>
+</head>
+
+<body>
+    <header class="header">
+        <nav class="nav">
+            <div class="nav__logo">
+                <a href="#">
+                    <img src="./../img/logo.png" alt="Logo" />
+                    <p>Transport Diary</p>
+                </a>
+            </div>
+            <ul class="nav__list">
+                <li class="nav__item"><span>&nbsp;</span><a href="#" class="nav__link">New Ride</a></li>
+                <li class="nav__item"><span>&nbsp;</span><a href="#" class="nav__link">My Account</a></li>
+                <li class="nav__item"><span>&nbsp;</span><a href="#" class="nav__link">Log Out</li></a>
+            </ul>
+            <div class='copyright'>
+                <i class="fa-solid fa-copyright"></i><span>Copyright</span>
+            </div>
+        </nav>
+    </header>
+    <main class="main">
+        <div class="main__header">
+            <h3 class="main__header-name">
+                Hello, Abhi
+            </h3>
+        </div>
+        <form class="ride--form">
+            <div class="form__header">
+                <p>Enter Ride Details</p>
+            </div>
+            <div class="form__content">
+                <div class="form__group">
+                    <p>From</p>
+                    <label for="from_place" class="form__label">Place</label>
+                    <input type="text" id="from_place" class="form__input" required>
+
+                    <label for="from_date" class="form__label">Date</label>
+                    <input type="date" id="from_date" class="form__input" required>
+                </div>
+                <div class="form__group">
+                    <p>To</p>
+                    <label for="to_place" class="form__label">Place</label>
+                    <input type="text" id="to_place" class="form__input" required>
+
+                    <label for="to_date" class="form__label">Date</label>
+                    <input type="date" id="to_date" class="form__input" required>
+                </div>
+                <div class="form__group">
+                    <p>Distance (km)</p>
+                    <label for="distance" class="form__label">&nbsp;</label>
+                    <input type="number" id="distance" class="form__input" required>
+                </div>
+                <div class="form__group">
+                    <p>Fuel</p>
+                    <label for="rate" class="form__label">Rate (per litre)</label>
+                    <input type="number" id="rate" class="form__input" required>
+
+                    <label for="quantity" class="form__label">Quantity (litre)</label>
+                    <input type="number" id="quantity" class="form__input" required>
+                </div>
+            </div>
+            <div class="form__footer">
+                <button type="submit" class="form__submit">Submit</button>
+            </div>
+        </form>
+    </main>
+    <script src="./../js/bundle.js"></script>
+    <script src="./../js/styles/user_dashboard.js"></script>
+</body>
+
+</html>

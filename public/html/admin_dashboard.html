@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="./../img/logo.png" type="image/x-icon">
+
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+    <!-- Custom css -->
+    <link rel="stylesheet" href="./../css/admin_dashboard.css" />
+
+    <!-- Font awesome link -->
+    <script src="https://kit.fontawesome.com/16f1886a82.js" crossorigin="anonymous" defer></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <title>User Dashboard</title>
+</head>
+
+<body>
+    <header class="header">
+        <nav class="nav">
+            <div class="nav__logo">
+                <a href="#">
+                    <img src="./../img/logo.png" alt="Logo" />
+                    <p>Transport Diary</p>
+                </a>
+            </div>
+            <ul class="nav__list">
+                <li class="nav__item"><span>&nbsp;</span><a href="#" class="nav__link">All Rides</a></li>
+                <li class="nav__item"><span>&nbsp;</span><a href="#" class="nav__link">Manage Driver</a></li>
+                <li class="nav__item"><span>&nbsp;</span><a href="#" class="nav__link">My Account</a></li>
+                <li class="nav__item"><span>&nbsp;</span><a href="#" class="nav__link logOutBtn">Log Out</li></a>
+            </ul>
+            <div class='copyright'>
+                <i class="fa-solid fa-copyright"></i><span>Copyright</span>
+            </div>
+        </nav>
+    </header>
+    <main class="main">
+        <div class="main__header">
+            <h3 class="main__header-name">
+                Hello Admin, Abhi
+            </h3>
+        </div>
+        <div class="rides">
+            <div class="rides__heading">
+                <h2>All Rides</h2>
+            </div>
+            <div class="ride">
+                <div class="ride__left">
+                    <img src="./../img/user.png" alt="User Photo">
+                    <p><i class="fa-solid fa-user ride__icon"></i> Abhi</p>
+                    <p><i class="fa-solid fa-mobile-button ride__icon"></i> 8767376497</p>
+                </div>
+                <div class="ride__details">
+                    <h4>Ride Details</h4>
+                    <p><i class="fa-solid fa-location-dot ride__icon"></i> Location - <b>FROM</b> Ravet <b>TO</b> Akurdi
+                    </p>
+                    <p><i class="fa-solid fa-calendar-day ride__icon"></i> Date - <b>FROM</b> 27/03/2022 <b>TO</b>
+                        28/03/2022
+                    </p>
+                    <p><i class="fa-solid fa-route ride__icon"></i> Distance - 27 km</p>
+                </div>
+                <div class="fuel__details">
+                    <h4>Fuel Details</h4>
+                    <p><i class="fa-solid fa-coins ride__icon"></i> Rate - 120 ₹/ltr</p>
+                    <p><i class="fa-solid fa-droplet ride__icon"></i> Quantity - 2 ltr</p>
+                </div>
+                <div class="ride__right">
+                    <i class="fa-solid fa-circle-check"></i>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="./../js/bundle.js"></script>
+    <script src="./../js/styles/admin_dashboard.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,88 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(http-equiv='X-UA-Compatible' content='IE=edge')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  // Favicon
+  link(rel='shortcut icon' href='./../img/logo.png' type='image/x-icon')
+  // Google fonts
+  link(rel='preconnect' href='https://fonts.googleapis.com')
+  link(rel='preconnect' href='https://fonts.gstatic.com' crossorigin='')
+  link(href='https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap' rel='stylesheet')
+  // Custom css
+  link(rel='stylesheet' href='./../css/admin_dashboard.css')
+  // Font awesome link
+  script(src='https://kit.fontawesome.com/16f1886a82.js' crossorigin='anonymous' defer='')
+  script(src='//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js')
+  title #{title}
+header.header
+- const name = user.name.split(' ')[0]
+  nav.nav
+    .nav__logo
+      a(href='#')
+        img(src='./../img/logo.png' alt='Logo')
+        p Transport Diary
+    ul.nav__list
+      li.nav__item
+        span &nbsp;
+        a.nav__link(href='#') All Rides
+      li.nav__item
+        span &nbsp;
+        a.nav__link(href='#') Manage Driver
+      li.nav__item
+        span &nbsp;
+        a.nav__link(href='#') My Account
+      li.nav__item
+        span &nbsp;
+        a.nav__link.logOutBtn(href='#') Log Out
+    .copyright
+      i.fa-solid.fa-copyright
+      span Copyright
+main.main
+  .main__header
+    h3.main__header-name
+      | Hello Admin, #{name}
+  .rides
+    .rides__heading
+      h2 All Rides
+    each ride in rides
+      .ride
+        .ride__left
+          img(src=`./../img/${ride.user.photo}` alt='User Photo')
+          p
+            i.fa-solid.fa-user.ride__icon
+            |  #{ride.user.name}
+          p
+            i.fa-solid.fa-mobile-button.ride__icon
+            |  #{ride.user.mobile}
+        .ride__details
+          h4 Ride Details
+          p
+            i.fa-solid.fa-location-dot.ride__icon
+            |  Location - 
+            b FROM
+            |  #{ride.fromPlace} 
+            b TO
+            |  #{ride.toPlace}
+          p
+            i.fa-solid.fa-calendar-day.ride__icon
+            |  Date - 
+            b FROM
+            |  #{ride.fromDate.toLocaleString('en-IN')} 
+            b TO
+            |  #{ride.toDate.toLocaleString('en-IN')}
+          p
+            i.fa-solid.fa-route.ride__icon
+            |  Distance - #{ride.distance} km
+        .fuel__details
+          h4 Fuel Details
+          p
+            i.fa-solid.fa-coins.ride__icon
+            |  Rate - #{ride.rate} &#x20B9;/ltr
+          p
+            i.fa-solid.fa-droplet.ride__icon
+            |  Quantity - #{ride.quantity} ltr
+        .ride__right
+          i.fa-solid.fa-circle-check
+script(src='./../js/bundle.js')
+script(src='./../js/styles/admin_dashboard.js')
